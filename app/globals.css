@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a1120;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #1a1a2e;
   --navy: #0a1120;
   --navy-light: #111d33;
   --navy-mid: #162840;
   --orange: #f58a3b;
   --orange-light: #ff9f58;
-  --teal: #4bc5c1;
-  --teal-light: #6ee7e3;
+  --teal: #2fb4af;
+  --teal-light: #5ddad6;
   --purple: #9b59b6;
   --purple-light: #bb7bd4;
   --gold: #d4a843;
+  --light: #f8f9fc;
+  --light-warm: #fdf8f3;
+  --light-cool: #f0f4f8;
+  --light-border: #e2e8f0;
 }
 
 @theme inline {
@@ -28,6 +32,10 @@
   --color-purple: var(--purple);
   --color-purple-light: var(--purple-light);
   --color-gold: var(--gold);
+  --color-light: var(--light);
+  --color-light-warm: var(--light-warm);
+  --color-light-cool: var(--light-cool);
+  --color-light-border: var(--light-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -47,10 +55,6 @@ body {
   0%, 100% { box-shadow: 0 0 20px rgba(245,138,59,0.3); }
   50% { box-shadow: 0 0 40px rgba(245,138,59,0.6); }
 }
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -59,38 +63,31 @@ body {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
-@keyframes slide-left {
-  from { opacity: 0; transform: translateX(40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes count-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
 
 .animate-float { animation: float 3s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: shimmer 3s ease-in-out infinite;
-}
 .animate-fade-up { animation: fade-up 0.8s ease-out both; }
 .animate-scale-in { animation: scale-in 0.6s ease-out both; }
-.animate-slide-left { animation: slide-left 0.6s ease-out both; }
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
-.delay-600 { animation-delay: 0.6s; }
 
-/* Glassmorphism card */
-.glass {
+/* Glass - dark variant (hero) */
+.glass-dark {
   background: rgba(22, 40, 64, 0.7);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glass - light variant (sections) */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 /* Gradient text */
@@ -101,7 +98,7 @@ body {
   background-clip: text;
 }
 .text-gradient-teal {
-  background: linear-gradient(135deg, #4bc5c1, #6ee7e3);
+  background: linear-gradient(135deg, #2fb4af, #5ddad6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,8 +112,8 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--navy); }
-::-webkit-scrollbar-thumb { background: var(--navy-mid); border-radius: 3px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--orange); }
 
 /* Smooth scroll */

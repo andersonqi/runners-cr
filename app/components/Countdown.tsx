@@ -43,7 +43,7 @@ export default function Countdown() {
   const renderUnit = useCallback(
     (label: string, value: number | null) => (
       <div key={label} className="flex flex-col items-center">
-        <div className="glass flex h-16 w-16 items-center justify-center rounded-xl transition-transform hover:scale-105 sm:h-20 sm:w-20">
+        <div className="glass-dark flex h-16 w-16 items-center justify-center rounded-xl transition-transform hover:scale-105 sm:h-20 sm:w-20">
           <span className="text-2xl font-bold text-white sm:text-3xl">
             {value !== null ? String(value).padStart(2, "0") : "--"}
           </span>
