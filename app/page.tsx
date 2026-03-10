@@ -83,8 +83,8 @@ export default function Home() {
       </section>
 
       {/* Rutas */}
-      <section id="rutas" className="relative px-4 py-24 sm:px-6">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(75,197,193,0.06)_0%,_transparent_70%)]" />
+      <section id="rutas" className="relative bg-[#0d1520] px-4 py-24 sm:px-6">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(75,197,193,0.08)_0%,_transparent_60%)]" />
         <div className="relative mx-auto max-w-6xl">
           <AnimateOnScroll animation="fade-up">
             <div className="mb-16 text-center">
@@ -96,7 +96,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* 10 KM */}
             <AnimateOnScroll animation="fade-up" delay={0} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-orange/20 bg-navy-light transition-all duration-300 hover:border-orange/40 hover:shadow-2xl hover:shadow-orange/10 hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-orange/20 bg-[#162840] transition-all duration-300 hover:border-orange/40 hover:shadow-2xl hover:shadow-orange/10 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-b from-orange/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative">
                   <div className="bg-gradient-to-r from-orange to-orange-light px-6 py-6 text-center">
@@ -137,7 +137,7 @@ export default function Home() {
 
             {/* 6 KM */}
             <AnimateOnScroll animation="fade-up" delay={100} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-teal/20 bg-navy-light transition-all duration-300 hover:border-teal/40 hover:shadow-2xl hover:shadow-teal/10 hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-teal/20 bg-[#162840] transition-all duration-300 hover:border-teal/40 hover:shadow-2xl hover:shadow-teal/10 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-b from-teal/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative">
                   <div className="bg-gradient-to-r from-teal to-teal-light px-6 py-6 text-center">
@@ -178,7 +178,7 @@ export default function Home() {
 
             {/* 3.5 KM */}
             <AnimateOnScroll animation="fade-up" delay={200} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-gray-700/50 bg-navy-light transition-all duration-300 hover:border-gray-600 hover:shadow-2xl hover:shadow-white/5 hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-gray-700/50 bg-[#162840] transition-all duration-300 hover:border-gray-600 hover:shadow-2xl hover:shadow-white/5 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative flex h-full flex-col">
                   <div className="bg-gradient-to-r from-gray-600 to-gray-500 px-6 py-6 text-center">
@@ -205,7 +205,7 @@ export default function Home() {
 
             {/* Kids Run */}
             <AnimateOnScroll animation="fade-up" delay={300} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-purple/20 bg-navy-light transition-all duration-300 hover:border-purple/40 hover:shadow-2xl hover:shadow-purple/10 hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-purple/20 bg-[#162840] transition-all duration-300 hover:border-purple/40 hover:shadow-2xl hover:shadow-purple/10 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-b from-purple/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative flex h-full flex-col">
                   <div className="bg-gradient-to-r from-purple to-purple-light px-6 py-6 text-center">
@@ -234,8 +234,8 @@ export default function Home() {
       </section>
 
       {/* Incluye */}
-      <section id="incluye" className="relative px-4 py-24 sm:px-6">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/30 to-navy" />
+      <section id="incluye" className="relative bg-[#141e30] px-4 py-24 sm:px-6">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(212,168,67,0.07)_0%,_transparent_50%)]" />
         <div className="relative mx-auto max-w-4xl">
           <AnimateOnScroll animation="fade-up">
             <div className="mb-16 text-center">
@@ -269,8 +269,8 @@ export default function Home() {
       </section>
 
       {/* Inscripciones */}
-      <section id="pago" className="relative px-4 py-24 sm:px-6">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(245,138,59,0.08)_0%,_transparent_60%)]" />
+      <section id="pago" className="relative bg-[#0f1923] px-4 py-24 sm:px-6">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(245,138,59,0.1)_0%,_transparent_50%)]" />
         <div className="relative mx-auto max-w-3xl">
           <AnimateOnScroll animation="fade-up">
             <div className="mb-16 text-center">
@@ -343,7 +343,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 px-4 py-10">
+      <footer className="border-t border-white/5 bg-[#080e18] px-4 py-10">
         <div className="mx-auto max-w-6xl flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="flex items-center gap-2">
             <span className="text-sm font-bold tracking-wide">
