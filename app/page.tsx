@@ -43,13 +43,18 @@ export default function Home() {
                 <p className="text-xs font-bold sm:text-sm">8:00 AM</p>
               </div>
             </div>
-            <div className="glass flex flex-col items-center gap-1 rounded-2xl px-3 py-3 sm:flex-row sm:gap-2.5 sm:rounded-full sm:px-5 sm:py-2.5">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Redondel+Abangares+Guanacaste+Costa+Rica"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass flex cursor-pointer flex-col items-center gap-1 rounded-2xl px-3 py-3 transition-all hover:bg-white/[0.06] sm:flex-row sm:gap-2.5 sm:rounded-full sm:px-5 sm:py-2.5"
+            >
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-purple/10 text-sm sm:h-8 sm:w-8 sm:text-base">📍</span>
               <div className="text-center sm:text-left">
                 <p className="text-[9px] font-medium uppercase tracking-wider text-gray-500 sm:text-[10px]">Salida</p>
-                <p className="text-xs font-bold sm:text-sm">Redondel</p>
+                <p className="text-xs font-bold underline decoration-white/30 underline-offset-2 sm:text-sm">Redondel</p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Countdown */}
