@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Order, Registration, getRutaLabel, formatColones } from "@/lib/types";
+import * as XLSX from "xlsx";
 
 interface OrderWithRegistrations extends Order {
   registrations: Registration[];
@@ -110,6 +111,8 @@ export default function DashboardPage() {
   const [orders, setOrders] = useState<OrderWithRegistrations[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<"todos" | "pendiente" | "confirmado" | "rechazado">("todos");
+  const [tallaFilter, setTallaFilter] = useState<string>("todas");
+  const [rutaFilter, setRutaFilter] = useState<string>("todas");
   const [search, setSearch] = useState("");
   const didLoad = useRef(false);
 
@@ -143,6 +146,44 @@ export default function DashboardPage() {
     );
   }
 
+  async function deleteOrder(orderId: string, orderNumber: string) {
+    if (!confirm(`¿Estás seguro de eliminar la orden ${orderNumber}? Esto eliminará todos los participantes asociados.`)) return;
+    await supabase.from("orders").delete().eq("id", orderId);
+    setOrders((prev) => prev.filter((o) => o.id !== orderId));
+  }
+
+  function exportToExcel() {
+    const rows = filtered.flatMap((o) =>
+      o.registrations.map((r) => ({
+        Orden: o.order_number,
+        Nombre: r.nombre,
+        Apellidos: r.apellidos,
+        Cédula: r.cedula,
+        Teléfono: r.telefono,
+        Género: r.genero,
+        Ruta: getRutaLabel(r.ruta),
+        Talla: r.talla_camiseta,
+        Nacimiento: r.fecha_nacimiento,
+      }))
+    );
+
+    const ws = XLSX.utils.json_to_sheet(rows);
+    ws["!cols"] = [
+      { wch: 20 },
+      { wch: 15 },
+      { wch: 20 },
+      { wch: 15 },
+      { wch: 12 },
+      { wch: 12 },
+      { wch: 22 },
+      { wch: 8 },
+      { wch: 14 },
+    ];
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Participantes");
+    XLSX.writeFile(wb, `abangares-run-participantes.xlsx`);
+  }
+
   async function handleLogout() {
     await fetch("/api/auth", { method: "DELETE" });
     setAuth("logged_out");
@@ -170,6 +211,8 @@ export default function DashboardPage() {
 
   const filtered = orders.filter((o) => {
     if (filter !== "todos" && o.status !== filter) return false;
+    if (tallaFilter !== "todas" && !o.registrations.some((r) => r.talla_camiseta === tallaFilter)) return false;
+    if (rutaFilter !== "todas" && !o.registrations.some((r) => r.ruta === rutaFilter)) return false;
     if (search) {
       const s = search.toLowerCase();
       const matchOrder = o.order_number.toLowerCase().includes(s);
@@ -255,11 +298,41 @@ export default function DashboardPage() {
             <option value="confirmado">Confirmado</option>
             <option value="rechazado">Rechazado</option>
           </select>
+          <select
+            value={tallaFilter}
+            onChange={(e) => setTallaFilter(e.target.value)}
+            className="cursor-pointer rounded-lg border border-white/10 bg-navy-light px-4 py-2.5 text-white outline-none focus:border-orange"
+          >
+            <option value="todas">Todas las tallas</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+          <select
+            value={rutaFilter}
+            onChange={(e) => setRutaFilter(e.target.value)}
+            className="cursor-pointer rounded-lg border border-white/10 bg-navy-light px-4 py-2.5 text-white outline-none focus:border-orange"
+          >
+            <option value="todas">Todas las rutas</option>
+            <option value="10km">10K</option>
+            <option value="6km">6K</option>
+            <option value="3.5km">3.5K</option>
+            <option value="kids">Kids</option>
+          </select>
           <button
             onClick={loadOrders}
             className="cursor-pointer rounded-lg bg-orange/20 px-4 py-2.5 text-orange transition hover:bg-orange/30"
           >
             Recargar
+          </button>
+          <button
+            onClick={exportToExcel}
+            className="cursor-pointer rounded-lg bg-teal/20 px-4 py-2.5 text-teal transition hover:bg-teal/30"
+          >
+            Exportar Excel
           </button>
         </div>
 
@@ -371,6 +444,12 @@ export default function DashboardPage() {
                       Pendiente
                     </button>
                   )}
+                  <button
+                    onClick={() => deleteOrder(order.id, order.order_number)}
+                    className="cursor-pointer rounded-lg bg-red-900/30 px-3 py-1.5 text-xs text-red-400 transition hover:bg-red-900/50"
+                  >
+                    Eliminar
+                  </button>
                 </div>
               </div>
             ))}

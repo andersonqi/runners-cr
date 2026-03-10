@@ -75,41 +75,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Rutas - fondo claro */}
-      <section id="rutas" className="relative bg-light px-4 py-24 sm:px-6">
+      {/* Rutas */}
+      <section id="rutas" className="relative bg-[#0d1926] px-4 py-24 text-white sm:px-6">
         <div className="relative mx-auto max-w-6xl">
           <AnimateOnScroll animation="fade-up">
             <div className="mb-16 text-center">
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-teal">Categorías</p>
-              <h2 className="text-4xl font-black tracking-tight text-navy sm:text-5xl">Elegí tu Ruta</h2>
+              <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Elegí tu Ruta</h2>
             </div>
           </AnimateOnScroll>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* 10 KM */}
             <AnimateOnScroll animation="fade-up" delay={0} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-orange/20 bg-white shadow-lg shadow-orange/5 transition-all duration-300 hover:border-orange/40 hover:shadow-xl hover:shadow-orange/10 hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-orange/20 bg-navy-light shadow-lg shadow-orange/5 transition-all duration-300 hover:border-orange/40 hover:shadow-xl hover:shadow-orange/10 hover:-translate-y-1">
                 <div className="relative">
                   <div className="bg-gradient-to-r from-orange to-orange-light px-6 py-6 text-center text-white">
                     <p className="text-5xl font-black">10K</p>
                     <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/80">Ruta Larga</p>
                   </div>
                   <div className="p-6">
-                    <div className="mb-4 rounded-xl bg-light p-4">
+                    <div className="mb-4 rounded-xl bg-white/5 p-4">
                       <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
                         Premios
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                          <span className="flex items-center gap-2 text-sm text-gray-700"><span className="text-lg">🥇</span> 1er Lugar</span>
+                          <span className="flex items-center gap-2 text-sm text-gray-300"><span className="text-lg">🥇</span> 1er Lugar</span>
                           <span className="font-bold text-orange">₡100,000</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="flex items-center gap-2 text-sm text-gray-700"><span className="text-lg">🥈</span> 2do Lugar</span>
+                          <span className="flex items-center gap-2 text-sm text-gray-300"><span className="text-lg">🥈</span> 2do Lugar</span>
                           <span className="font-bold text-orange-light">₡50,000</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="flex items-center gap-2 text-sm text-gray-700"><span className="text-lg">🥉</span> 3er Lugar</span>
+                          <span className="flex items-center gap-2 text-sm text-gray-300"><span className="text-lg">🥉</span> 3er Lugar</span>
                           <span className="font-bold text-orange-light/80">₡25,000</span>
                         </div>
                       </div>
@@ -128,28 +128,28 @@ export default function Home() {
 
             {/* 6 KM */}
             <AnimateOnScroll animation="fade-up" delay={100} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-teal/20 bg-white shadow-lg shadow-teal/5 transition-all duration-300 hover:border-teal/40 hover:shadow-xl hover:shadow-teal/10 hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-teal/20 bg-navy-light shadow-lg shadow-teal/5 transition-all duration-300 hover:border-teal/40 hover:shadow-xl hover:shadow-teal/10 hover:-translate-y-1">
                 <div className="relative">
                   <div className="bg-gradient-to-r from-teal to-teal-light px-6 py-6 text-center text-white">
                     <p className="text-5xl font-black">6K</p>
                     <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/80">Ruta Corta</p>
                   </div>
                   <div className="p-6">
-                    <div className="mb-4 rounded-xl bg-light p-4">
+                    <div className="mb-4 rounded-xl bg-white/5 p-4">
                       <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
                         Premios
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                          <span className="flex items-center gap-2 text-sm text-gray-700"><span className="text-lg">🥇</span> 1er Lugar</span>
+                          <span className="flex items-center gap-2 text-sm text-gray-300"><span className="text-lg">🥇</span> 1er Lugar</span>
                           <span className="font-bold text-teal">₡50,000</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="flex items-center gap-2 text-sm text-gray-700"><span className="text-lg">🥈</span> 2do Lugar</span>
+                          <span className="flex items-center gap-2 text-sm text-gray-300"><span className="text-lg">🥈</span> 2do Lugar</span>
                           <span className="font-bold text-teal-light">₡30,000</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="flex items-center gap-2 text-sm text-gray-700"><span className="text-lg">🥉</span> 3er Lugar</span>
+                          <span className="flex items-center gap-2 text-sm text-gray-300"><span className="text-lg">🥉</span> 3er Lugar</span>
                           <span className="font-bold text-teal-light/80">₡20,000</span>
                         </div>
                       </div>
@@ -168,7 +168,7 @@ export default function Home() {
 
             {/* 3.5 KM */}
             <AnimateOnScroll animation="fade-up" delay={200} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg shadow-gray-100 transition-all duration-300 hover:border-gray-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-gray-700/30 bg-navy-light shadow-lg shadow-black/10 transition-all duration-300 hover:border-gray-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="relative flex h-full flex-col">
                   <div className="bg-gradient-to-r from-gray-500 to-gray-400 px-6 py-6 text-center text-white">
                     <p className="text-5xl font-black">3.5K</p>
@@ -176,16 +176,16 @@ export default function Home() {
                   </div>
                   <div className="flex flex-1 flex-col items-center justify-between p-6">
                     <div className="flex flex-col items-center">
-                      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-50 text-3xl">
+                      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/5 text-3xl">
                         🚶
                       </div>
-                      <p className="mb-6 text-center text-sm text-gray-500">
+                      <p className="mb-6 text-center text-sm text-gray-400">
                         Para toda la familia
                       </p>
                     </div>
-                    <div className="w-full rounded-2xl bg-gray-50 py-3 text-center">
+                    <div className="w-full rounded-2xl bg-white/5 py-3 text-center">
                       <p className="text-[10px] font-medium uppercase tracking-wider text-gray-400">Inscripción</p>
-                      <p className="text-2xl font-black text-gray-700">₡10,000</p>
+                      <p className="text-2xl font-black text-white">₡10,000</p>
                     </div>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ export default function Home() {
 
             {/* Kids Run */}
             <AnimateOnScroll animation="fade-up" delay={300} className="h-full">
-              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-purple/20 bg-white shadow-lg shadow-purple/5 transition-all duration-300 hover:border-purple/40 hover:shadow-xl hover:shadow-purple/10 hover:-translate-y-1">
+              <div className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-purple/20 bg-navy-light shadow-lg shadow-purple/5 transition-all duration-300 hover:border-purple/40 hover:shadow-xl hover:shadow-purple/10 hover:-translate-y-1">
                 <div className="relative flex h-full flex-col">
                   <div className="bg-gradient-to-r from-purple to-purple-light px-6 py-6 text-center text-white">
                     <p className="text-5xl font-black">KIDS</p>
@@ -205,7 +205,7 @@ export default function Home() {
                       <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple/5 text-3xl">
                         🧒
                       </div>
-                      <p className="mb-6 text-center text-sm text-gray-500">
+                      <p className="mb-6 text-center text-sm text-gray-400">
                         Los campeones del futuro
                       </p>
                     </div>
@@ -221,13 +221,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Incluye - fondo cálido */}
-      <section id="incluye" className="relative bg-white px-4 py-24 sm:px-6">
+      {/* Incluye */}
+      <section id="incluye" className="relative bg-[#111c2e] px-4 py-24 text-white sm:px-6">
         <div className="relative mx-auto max-w-4xl">
           <AnimateOnScroll animation="fade-up">
             <div className="mb-16 text-center">
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-gold">Tu inscripción</p>
-              <h2 className="text-4xl font-black tracking-tight text-navy sm:text-5xl">Incluye</h2>
+              <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Incluye</h2>
             </div>
           </AnimateOnScroll>
 
@@ -240,12 +240,12 @@ export default function Home() {
               { icon: "🎟️", label: "Rifas", desc: "Premios extra" },
             ].map((item, i) => (
               <AnimateOnScroll key={item.label} animation="scale-in" delay={i * 100}>
-                <div className="group flex flex-col items-center gap-3 rounded-2xl border border-light-border bg-light px-4 py-6 text-center transition-all duration-300 hover:border-orange/20 hover:shadow-lg hover:-translate-y-1">
+                <div className="glass-dark group flex flex-col items-center gap-3 rounded-2xl px-4 py-6 text-center transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
                   <span className="text-4xl transition-transform duration-300 group-hover:scale-110">
                     {item.icon}
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-navy">{item.label}</p>
+                    <p className="text-sm font-bold">{item.label}</p>
                     <p className="mt-0.5 text-[11px] text-gray-400">{item.desc}</p>
                   </div>
                 </div>
@@ -255,13 +255,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Inscripciones - fondo suave */}
-      <section id="pago" className="relative bg-light-warm px-4 py-24 sm:px-6">
+      {/* Inscripciones - con imagen de fondo */}
+      <section id="pago" className="relative px-4 py-24 text-white sm:px-6">
+        <div className="absolute inset-0 bg-[url('/background_2.jpeg')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute inset-0 bg-navy/80" />
         <div className="relative mx-auto max-w-3xl">
           <AnimateOnScroll animation="fade-up">
             <div className="mb-16 text-center">
               <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-orange">Inscripciones</p>
-              <h2 className="text-4xl font-black tracking-tight text-navy sm:text-5xl">
+              <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">
                 ABANGARES <span className="text-gradient-orange italic">RUN</span>
               </h2>
             </div>
@@ -272,12 +274,12 @@ export default function Home() {
             <div className="mb-12">
               <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Organizan</p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <div className="w-full rounded-2xl border border-light-border bg-white px-8 py-5 text-center shadow-sm transition-all hover:shadow-md sm:w-auto">
-                  <p className="text-lg font-bold text-navy">Jonathan Mena</p>
+                <div className="glass-dark w-full rounded-2xl px-8 py-5 text-center transition-all hover:bg-white/10 sm:w-auto">
+                  <p className="text-lg font-bold">Jonathan Mena</p>
                   <p className="mt-1 text-sm text-gray-400">8710-7247</p>
                 </div>
-                <div className="w-full rounded-2xl border border-light-border bg-white px-8 py-5 text-center shadow-sm transition-all hover:shadow-md sm:w-auto">
-                  <p className="text-lg font-bold text-navy">Kenneth Mena</p>
+                <div className="glass-dark w-full rounded-2xl px-8 py-5 text-center transition-all hover:bg-white/10 sm:w-auto">
+                  <p className="text-lg font-bold">Kenneth Mena</p>
                   <p className="mt-1 text-sm text-gray-400">8533-5311</p>
                 </div>
               </div>
@@ -289,14 +291,14 @@ export default function Home() {
             <div className="mb-12">
               <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Pago por SINPE Móvil</p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <div className="w-full cursor-pointer rounded-2xl border border-orange/15 bg-white px-8 py-6 text-center shadow-sm transition-all hover:border-orange/30 hover:shadow-md hover:-translate-y-0.5 sm:w-auto">
-                  <p className="text-3xl font-black tracking-wide text-navy">8710-7247</p>
+                <div className="glass-dark w-full cursor-pointer rounded-2xl px-8 py-6 text-center transition-all hover:bg-white/10 hover:-translate-y-0.5 sm:w-auto">
+                  <p className="text-3xl font-black tracking-wide">8710-7247</p>
                   <p className="mt-1 text-sm text-gray-400">Jonathan Mena</p>
                 </div>
-                <div className="hidden text-2xl text-gray-300 sm:block">ó</div>
-                <div className="block text-center text-lg text-gray-300 sm:hidden">ó</div>
-                <div className="w-full cursor-pointer rounded-2xl border border-teal/15 bg-white px-8 py-6 text-center shadow-sm transition-all hover:border-teal/30 hover:shadow-md hover:-translate-y-0.5 sm:w-auto">
-                  <p className="text-3xl font-black tracking-wide text-navy">8533-5311</p>
+                <div className="hidden text-2xl text-gray-500 sm:block">ó</div>
+                <div className="block text-center text-lg text-gray-500 sm:hidden">ó</div>
+                <div className="glass-dark w-full cursor-pointer rounded-2xl px-8 py-6 text-center transition-all hover:bg-white/10 hover:-translate-y-0.5 sm:w-auto">
+                  <p className="text-3xl font-black tracking-wide">8533-5311</p>
                   <p className="mt-1 text-sm text-gray-400">Kenneth Mena</p>
                 </div>
               </div>
@@ -305,9 +307,9 @@ export default function Home() {
 
           <AnimateOnScroll animation="scale-in" delay={300}>
             <div className="mb-12 text-center">
-              <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-light-border bg-white px-5 py-2.5 text-sm text-gray-500 shadow-sm">
+              <div className="glass-dark mx-auto inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-gray-400">
                 <span className="text-base">💬</span>
-                Detalle: <span className="font-bold text-navy">&quot;Carrera Abangares&quot;</span>
+                Detalle: <span className="font-bold text-white">&quot;Carrera Abangares&quot;</span>
               </div>
             </div>
           </AnimateOnScroll>
@@ -329,14 +331,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-light-border bg-white px-4 py-10">
-        <div className="mx-auto max-w-6xl flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <footer className="border-t border-white/5 bg-navy px-4 py-10">
+        <div className="mx-auto max-w-6xl flex flex-col items-center justify-between gap-4 text-white sm:flex-row">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-bold tracking-wide text-navy">
+            <span className="text-sm font-bold tracking-wide">
               ABANGARES <span className="text-gradient-orange italic">RUN</span>
             </span>
           </div>
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-gray-500">
             1 Edición 2026 &middot; Abangares, Guanacaste
           </p>
         </div>

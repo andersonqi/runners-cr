@@ -35,8 +35,11 @@ create policy "Allow public insert on orders" on orders for insert with check (t
 create policy "Allow public select on orders" on orders for select using (true);
 create policy "Allow public update on orders" on orders for update using (true);
 
+create policy "Allow public delete on orders" on orders for delete using (true);
+
 create policy "Allow public insert on registrations" on registrations for insert with check (true);
 create policy "Allow public select on registrations" on registrations for select using (true);
+create policy "Allow public delete on registrations" on registrations for delete using (true);
 
 -- Storage bucket for payment proofs
 -- Run this separately or create via Supabase dashboard:
