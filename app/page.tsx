@@ -260,7 +260,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl">
           <AnimateOnScroll animation="fade-up">
             <div className="mb-14 text-center">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Gracias a</p>
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Gracias a nuestros</p>
               <h2 className="text-4xl font-black tracking-tight text-navy sm:text-5xl">Patrocinadores</h2>
             </div>
           </AnimateOnScroll>
@@ -272,11 +272,13 @@ export default function Home() {
               { src: "/akron.jpeg", alt: "Akron" },
             ].map((sponsor, i) => (
               <AnimateOnScroll key={sponsor.alt} animation="scale-in" delay={i * 100}>
-                <img
-                  src={sponsor.src}
-                  alt={sponsor.alt}
-                  className="h-20 w-auto object-contain mix-blend-multiply grayscale-[30%] transition-all duration-300 hover:grayscale-0 hover:scale-105 sm:h-28"
-                />
+                <div className="flex h-24 w-40 items-center justify-center sm:h-32 sm:w-52">
+                  <img
+                    src={sponsor.src}
+                    alt={sponsor.alt}
+                    className="max-h-full max-w-full object-contain mix-blend-multiply grayscale-[30%] transition-all duration-300 hover:grayscale-0 hover:scale-105"
+                  />
+                </div>
               </AnimateOnScroll>
             ))}
           </div>
