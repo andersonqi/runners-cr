@@ -255,6 +255,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Patrocinadores */}
+      <section className="bg-white px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-5xl">
+          <AnimateOnScroll animation="fade-up">
+            <div className="mb-14 text-center">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-400">Gracias a</p>
+              <h2 className="text-4xl font-black tracking-tight text-navy sm:text-5xl">Patrocinadores</h2>
+            </div>
+          </AnimateOnScroll>
+
+          <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-16">
+            {[
+              { src: "/interes.jpeg", alt: "Interés Social" },
+              { src: "/tortiricas.jpeg", alt: "TortiRicas" },
+              { src: "/akron.jpeg", alt: "Akron" },
+            ].map((sponsor, i) => (
+              <AnimateOnScroll key={sponsor.alt} animation="scale-in" delay={i * 100}>
+                <img
+                  src={sponsor.src}
+                  alt={sponsor.alt}
+                  className="h-20 w-auto object-contain mix-blend-multiply grayscale-[30%] transition-all duration-300 hover:grayscale-0 hover:scale-105 sm:h-28"
+                />
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Inscripciones - con imagen de fondo */}
       <section id="pago" className="relative px-4 py-24 text-white sm:px-6">
         <div className="absolute inset-0 bg-[url('/background_2.jpeg')] bg-cover bg-center bg-no-repeat" />
